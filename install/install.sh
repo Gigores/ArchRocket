@@ -13,14 +13,16 @@ echo "███████║██████╔╝██║░░╚═╝�
 echo "██╔══██║██╔══██╗██║░░██╗██╔══██║██╔══██╗██║░░██║██║░░██╗██╔═██╗░██╔══╝░░░░░██║░░░"
 echo "██║░░██║██║░░██║╚█████╔╝██║░░██║██║░░██║╚█████╔╝╚█████╔╝██║░╚██╗███████╗░░░██║░░░"
 echo "╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░"
-
+echo
 echo -n "the installation will start in "
 sleep 1
 for ((i=0; i<${#countdown}; i++)); do
     echo -n "${countdown:$i:1}"
     sleep 0.33
 done
-echo ""
+echo "Don't leave! You will need to input password a couple of times."
+echo
+sleep 4
 
 # installing yay
 sudo pacman -S --needed --noconfirm base-devel git

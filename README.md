@@ -15,12 +15,15 @@ Originally created for personal use, now shared on GitHub.
 
 ## Installation
 
-Before running ArchRocket, it is expected that an audio server (like **PipeWire** or **PulseAudio**) is already set up.
+Before running **ArchRocket**, make sure the following conditions are met:
 
-Clone the repository and run the script as root:
+- A fresh Arch Linux installation is used (preferably installed via **archinstall** or similar method).
+- An audio server (like **PipeWire** or **PulseAudio**) is already set up.
+
+To install, clone the repository and run the script as root:
 
 ```bash
 git clone https://github.com/Gigores/ArchRocket.git
-cd install
+cd ArchRocket/install
 sudo bash install.sh
 ```
