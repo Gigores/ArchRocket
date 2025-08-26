@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Extract Here
+Comment=Extract archive to current folder
+Exec=sh -c 'engrampa --extract-here "%F"'
+Icon=package-x-generic
+Selection=any
+Extensions=zip;tar;gz;tgz;bz2;tbz2;7z;rar
+Quote=double

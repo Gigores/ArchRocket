@@ -1,0 +1,168 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: rgb(30, 30, 46);
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+/* you can set a style on hover for any module like this */
+
+#workspaces button {
+    color: rgb(69, 71, 90);
+    padding: 0 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: rgb(137, 180, 250);
+    border-radius: 10px;
+    transition: 0.33s;
+}
+
+#workspaces button.active {
+    padding: 0 14px;
+}
+
+#workspaces button.urgent {
+    background-color: rgb(243, 139, 168);
+}
+
+#workspaces button:first-child {
+    margin-left: 0;
+}
+
+#workspaces button:last-child {
+    margin-right: 0;
+}
+
+#custom-start,
+#workspaces,
+#clock,
+#battery,
+#network,
+#language,
+#pulseaudio {
+    background-color: rgb(69, 71, 90);
+    padding: 4px 10px;
+    margin: 4px 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#custom-start:hover,
+#clock:hover,
+#battery:hover,
+#network:hover,
+#language:hover,
+#pulseaudio:hover {
+    background-color: rgb(88, 91, 112);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+.modules-right:last-child {
+    margin-right: 4px;
+}
+
+.modules-left:first-child {
+    margin-left: 4px;
+}
+
+#clock {
+    color: rgb(180, 190, 254);
+}
+
+#battery {
+    color: rgb(249, 226, 175);
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#custom-start,
+#network {
+    padding-left: 5px;
+}
+
+#custom-start {
+    color: rgb(166, 227, 161);
+}
+
+#network {
+    color: rgb(137, 220, 235);
+}
+
+#network.disconnected {
+}
+
+#pulseaudio {
+    color: rgb(250, 179, 135);
+}
+
+#pulseaudio.muted {
+    color: #2a5c45;
+}
+
+#language {
+    color: rgb(166, 227, 161);
+}
+

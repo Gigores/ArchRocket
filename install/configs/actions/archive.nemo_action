@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Archive
+Comment=Create archive
+Exec=engrampa --add %F
+Icon=package-x-generic
+Selection=any
+Extensions=dir;
+Quote=double

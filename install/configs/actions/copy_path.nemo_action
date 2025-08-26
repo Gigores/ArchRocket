@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Copy Full Path
+Comment=Copy full path of selected file or directory to clipboard
+Exec=sh -c 'realpath "%F" | wl-copy'
+Icon=edit-copy
+Selection=any
+Extensions=any
+Quote=double

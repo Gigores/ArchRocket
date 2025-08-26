@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Copy Filename
+Comment=Copy selected file name to clipboard
+Exec=sh -c 'basename "%F" | wl-copy'
+Icon=edit-copy
+Selection=any
+Extensions=any
+Quote=double
