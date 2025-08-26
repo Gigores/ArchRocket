@@ -8,7 +8,7 @@ Originally created for personal use, now shared on GitHub.
 
 ## Features
 
-- Installs essential packages: Hyprland, Ly login manager, Fish, Engrampa, and more.
+- Installs essential packages: Hyprland, Ly login manager, Fish, Nemo, and more.
 - Sets up user environment: standard directories (`Downloads`, `Pictures`, `Videos`, etc.).
 - Configures GTK and icon themes (Catppuccin + Papirus-Dark).
 - Applies user-friendly keybindings and Hyprland window rules.
