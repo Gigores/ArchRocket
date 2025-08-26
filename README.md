@@ -15,7 +15,7 @@ Originally created for personal use, now shared on GitHub.
 
 ## Installation
 
-Before running ArchRocket, it is expected that fn audio server (like **PipeWire** or **PulseAudio**) is already set up.
+Before running ArchRocket, it is expected that an audio server (like **PipeWire** or **PulseAudio**) is already set up.
 
 Clone the repository and run the script as root:
 
