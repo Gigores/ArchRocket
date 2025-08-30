@@ -87,8 +87,11 @@ element-icon {
     text-color:       inherit;
 }
 window {
-    padding:          5;
+    padding:          10;
     background-color: @background;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #74c7ec;
 }
 mainbox {
     padding: 0;
@@ -167,4 +170,5 @@ textbox-prompt-colon {
     expand:     false;
     str:        ":";
     text-color: inherit;
+    display: none;
 }

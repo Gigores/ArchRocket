@@ -5,11 +5,10 @@
 }
 
 window#waybar {
-    background-color: rgb(30, 30, 46);
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    background-image: linear-gradient(rgb(24, 24, 37), rgb(30, 30, 46), rgb(30, 30, 46));
     color: #ffffff;
     transition-property: background-color;
-    transition-duration: 1s;
+    transition-duration: .5s;
 }
 
 window#waybar.hidden {
@@ -42,7 +41,7 @@ button {
     padding: 0 4px;
     margin-left: 2px;
     margin-right: 2px;
-    background-color: rgb(137, 180, 250);
+    background-image: linear-gradient(rgb(116, 199, 236), rgb(137, 180, 250), rgb(148, 226, 213));
     border-radius: 10px;
     transition: 0.33s;
 }
@@ -70,11 +69,12 @@ button {
 #network,
 #language,
 #pulseaudio {
-    background-color: rgb(69, 71, 90);
+    background-image: linear-gradient(rgb(49, 50, 68), rgb(69, 71, 90), rgb(69, 71, 90));
     padding: 4px 10px;
     margin: 4px 0;
     border-radius: 10px;
     transition: 0.5s;
+    border-bottom: 4px solid rgb(49, 50, 68); 
 }
 
 #custom-start:hover,
@@ -83,7 +83,9 @@ button {
 #network:hover,
 #language:hover,
 #pulseaudio:hover {
-    background-color: rgb(88, 91, 112);
+    margin-top: 8px;
+    background-image: linear-gradient(rgb(69, 71, 90), rgb(88, 91, 112), rgb(88, 91, 112));
+    border-bottom: 0px solid rgb(69, 71, 90); 
 }
 
 /* If workspaces is the leftmost module, omit left margin */

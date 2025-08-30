@@ -1,29 +1,30 @@
 USER_HOME=$(eval echo "~$SUDO_USER")
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-countdown="3...2...1..."
+countdown="3...2...1"
 
 run_as_user() {
-    sudo -u "$SUDO_USER" bash -c "$1"
+  sudo -u "$SUDO_USER" bash -c "$1"
 }
 
 clear
-echo "░█████╗░██████╗░░█████╗░██╗░░██╗██████╗░░█████╗░░█████╗░██╗░░██╗███████╗████████╗"
-echo "██╔══██╗██╔══██╗██╔══██╗██║░░██║██╔══██╗██╔══██╗██╔══██╗██║░██╔╝██╔════╝╚══██╔══╝"
-echo "███████║██████╔╝██║░░╚═╝███████║██████╔╝██║░░██║██║░░╚═╝█████═╝░█████╗░░░░░██║░░░"
-echo "██╔══██║██╔══██╗██║░░██╗██╔══██║██╔══██╗██║░░██║██║░░██╗██╔═██╗░██╔══╝░░░░░██║░░░"
-echo "██║░░██║██║░░██║╚█████╔╝██║░░██║██║░░██║╚█████╔╝╚█████╔╝██║░╚██╗███████╗░░░██║░░░"
-echo "╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░"
+echo " █████╗ ██████╗  █████╗ ██╗  ██╗██████╗  █████╗  █████╗ ██╗  ██╗███████╗████████╗"
+echo "██╔══██╗██╔══██╗██╔══██╗██║  ██║██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝╚══██╔══╝"
+echo "███████║██████╔╝██║  ╚═╝███████║██████╔╝██║  ██║██║  ╚═╝█████═╝ █████╗     ██║   "
+echo "██╔══██║██╔══██╗██║  ██╗██╔══██║██╔══██╗██║  ██║██║  ██╗██╔═██╗ ██╔══╝     ██║   "
+echo "██║  ██║██║  ██║╚█████╔╝██║  ██║██║  ██║╚█████╔╝╚█████╔╝██║ ╚██╗███████╗   ██║   "
+echo "╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝  ╚════╝ ╚═╝  ╚═╝╚══════╝   ╚═╝   "
 echo
 echo -n "the installation will start in "
 sleep 1
-for ((i=0; i<${#countdown}; i++)); do
-    echo -n "${countdown:$i:1}"
-    sleep 0.33
+for ((i = 0; i < ${#countdown}; i++)); do
+  echo -n "${countdown:$i:1}"
+  sleep 0.33
 done
+sleep 1
 echo
 echo "Don't leave! You will need to input password a couple of times."
 echo
-sleep 4
+sleep 3
 
 # installing yay
 sudo pacman -S --needed --noconfirm base-devel git
@@ -38,10 +39,10 @@ pacman -S --noconfirm pipewire hyprland hyprpaper waybar udiskie
 pacman -S --noconfirm xdg-desktop-portal-hyprland wl-clipboard polkit xorg-xwayland xdg-desktop-portal-gtk
 
 # installing apps
-pacman -S --noconfirm kitty nemo rofi neovim btop fastfetch pavucontrol networkmanager mako hyprshot hyprlock hypridle brightnessctl rofi-calc cliphist wget geany geany-plugins
+pacman -S --noconfirm kitty nemo rofi neovim btop fastfetch pavucontrol networkmanager polkit polkit-gnome mako hyprshot hyprlock hypridle brightnessctl rofi-calc cliphist wget geany geany-plugins
 pacman -S --noconfirm fish bat lsd
 pacman -S --noconfirm eog lollypop parole engrampa
-echo -e "bat cache --build\nclear\nexec fish" >> "$USER_HOME/.bashrc"
+echo -e "bat cache --build\nclear\nexec fish" >>"$USER_HOME/.bashrc"
 systemctl enable NetworkManager.service
 run_as_user 'yay -S --noconfirm nmgui-bin'
 

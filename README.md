@@ -19,6 +19,7 @@ Before running **ArchRocket**, make sure the following conditions are met:
 
 - A fresh Arch Linux installation is used (preferably installed via **archinstall** or similar method).
 - An audio server (like **PipeWire** or **PulseAudio**) is already set up.
+- Graphics card drivers are set up.
 
 To install, clone the repository and run the script as root:
 
