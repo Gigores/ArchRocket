@@ -12,6 +12,7 @@ Originally created for personal use, now shared on GitHub.
 - Sets up user environment: standard directories (`Downloads`, `Pictures`, `Videos`, etc.).
 - Configures GTK and icon themes (Catppuccin + Papirus-Dark).
 - Applies user-friendly keybindings and Hyprland window rules.
+- Adds an ability to take screenshots with text extraction (hyprshot + tesseract)
 
 ## Installation
 
