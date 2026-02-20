@@ -1,4 +1,4 @@
-# ArchRocket
+# ArchRocket (archived, does not work)
 
 ![Nemo file manager and LazyVim](Screenshots/1.png)
 ![Fish shell](Screenshots/2.png)
